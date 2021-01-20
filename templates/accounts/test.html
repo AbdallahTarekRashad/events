@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {{ user }}
+<a href="{% url 'accounts:logout' %}">Logout</a>
+<a href="{% url 'core:event_list' %}">events</a>
+<a href="{% url 'core:event_add' %}">add event</a>
+<a href="{% url 'core:myevent_list' %}">my events</a>
+</body>
+</html>

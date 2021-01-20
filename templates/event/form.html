@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {{ form.errors }}
+    {% csrf_token %}
+    <div>
+        {{ form.title.label }}
+        {{ form.title }}
+    </div>
+    <div>
+        {{ form.description.label }}
+        {{ form.description }}
+    </div>
+    <div>
+        {{ form.date.label }}
+        {{ form.date }}
+    </div>
+
+    {% if form.instance.pk %}
+        <input type="submit" value="Save">
+    {% else %}
+        <input type="submit" value="Add">
+        <input type="submit" name="another" value="Save and Add Another">
+    {% endif %}
+</form>
+
+</body>
+</html>
